@@ -1,0 +1,50 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.view_container {
+  font-size: 14px;
+}
+.main_container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/**************表格start***************/
+
+.el-table td,
+.el-table th {
+  padding: 6px 0;
+}
+.el-table th {
+  background-color: #fb6149;
+}
+.el-table thead {
+  color: #fff;
+}
+/**************表格end***************/
+
+/**************按钮start***************/
+.btn {
+  border: 1px solid #4c7bfe;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #4c7bfe;
+  cursor: pointer;
+  background: #fff;
+  letter-spacing: 2px;
+}
+.check_btn {
+  height: 38px;
+  display: inline-block;
+  line-height: 38px;
+  padding: 0 20px;
+  border-radius: 0;
+}
+.btn.btn_submit.btn_disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+/**************按钮end***************/
