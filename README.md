@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # uapp
 
 > A Vue.js project
@@ -28,3 +29,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# nsight
+n视界结算系统前端框架
+>>>>>>> a263c21c716bbc1ce7d361fdf678d94ac30cb484
