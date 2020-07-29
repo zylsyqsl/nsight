@@ -1,5 +1,5 @@
 import Vue from "vue";
-import App from "./margin.vue";
+import App from "./tradingParameter.vue";
 import router from "./router/index.js";
 
 // 导入对应的vuex文件
@@ -24,6 +24,7 @@ const selfMixin = {
 /* eslint-disable no-new */
 let app = new Vue({
   el: "#app",
+
   mixins: [globalMixin, selfMixin],
   router,
   store: store,

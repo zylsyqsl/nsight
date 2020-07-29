@@ -1,288 +1,248 @@
-export function commonEnum_InvestorType_0() {
-  return "个人";
-}
-export function commonEnum_InvestorType_1() {
-  return "机构";
-}
-export function commonEnum_InvestorType_2() {
-  return "自营";
-}
-export function commonEnum_DocumentType_0() {
-  return "组织机构代码";
-}
-export function commonEnum_DocumentType_1() {
-  return "中国公民身份证";
-}
-export function commonEnum_DocumentType_2() {
-  return "军官证";
-}
-export function commonEnum_DocumentType_3() {
-  return "警官证";
-}
-export function commonEnum_DocumentType_4() {
-  return "士兵证";
-}
-export function commonEnum_DocumentType_5() {
-  return "户口簿";
-}
-export function commonEnum_DocumentType_6() {
-  return "护照";
-}
-export function commonEnum_DocumentType_7() {
-  return "台胞证";
-}
-export function commonEnum_DocumentType_8() {
-  return "回乡证";
-}
-export function commonEnum_DocumentType_9() {
-  return "营业执照号";
-}
-export function commonEnum_DocumentType_A() {
-  return "税务登记号/当地纳税ID";
-}
-export function commonEnum_DocumentType_B() {
-  return "港澳居民来往内地通行证";
-}
-export function commonEnum_DocumentType_C() {
-  return "台湾居民来往大陆通行证";
-}
-export function commonEnum_DocumentType_D() {
-  return "驾照";
-}
-export function commonEnum_DocumentType_F() {
-  return "当地社保ID";
-}
-export function commonEnum_DocumentType_G() {
-  return "当地身份证";
-}
-export function commonEnum_DocumentType_H() {
-  return "商业登记证";
-}
-export function commonEnum_DocumentType_I() {
-  return "港澳永久性居民身份证";
-}
-export function commonEnum_DocumentType_J() {
-  return "人行开户许可证";
-}
-export function commonEnum_DocumentType_x() {
-  return "其他证件";
-}
-export function commonEnum_TransactionStatus_0() {
-  return "启用";
-}
-export function commonEnum_TransactionStatus_1() {
-  return "禁用";
-}
-export function commonEnum_SettlementStatus_0() {
-  return "未确认";
-}
-export function commonEnum_SettlementStatus_1() {
-  return "已确认";
-}
-export function commonEnum_UserTypes_0() {
-  return "经纪公司用户";
-}
-export function commonEnum_UserTypes_1() {
-  return "超级用户";
-}
-export function commonEnum_UserTypes_2() {
-  return "投资者用户";
-}
-export function commonEnum_Encryption_0() {
-  return "明文";
-}
-export function commonEnum_Encryption_2() {
-  return "AES加密";
-}
-export function commonEnum_Encryption_3() {
-  return "SHA加密";
-}
-export function commonEnum_Encryption_4() {
-  return "MD5加密";
-}
-export function commonEnum_LoginStatus_0() {
-  return "启用";
-}
-export function commonEnum_LoginStatus_1() {
-  return "禁用";
-}
-export function commonEnum_LoginStatus_2() {
-  return "锁定";
-}
-export function commonEnum_Currency_1() {
-  return "人民币";
-}
-export function commonEnum_Currency_2() {
-  return "港币";
-}
-export function commonEnum_Currency_3() {
-  return "美元";
-}
-export function commonEnum_BankCode_1() {
-  return "中国建设银行";
-}
-export function commonEnum_BankCode_2() {
-  return "中国农业银行";
-}
-export function commonEnum_BankCode_3() {
-  return "中国工商银行";
-}
-export function commonEnum_BankCode_4() {
-  return "中国银行";
-}
-export function commonEnum_BankCode_5() {
-  return "中国招商银行";
-}
-export function commonEnum_BankCode_6() {
-  return "中国交通银行";
-}
-export function commonEnum_BankCode_7() {
-  return "浦东发展银行";
-}
-export function commonEnum_BankCode_8() {
-  return "兴业银行";
-}
-export function commonEnum_BankCode_9() {
-  return "中国光大银行";
-}
-export function commonEnum_BankCode_a() {
-  return "广东发展银行";
-}
-export function commonEnum_ExchangeCode_0() {
-  return "通用内部使用";
-}
-export function commonEnum_ExchangeCode_1() {
-  return "上海黄金交易所";
-}
-export function commonEnum_ExchangeCode_2() {
-  return "上海期货交易所";
-}
-export function commonEnum_SpeculativeHedgingSigns_0() {
-  return "投机";
-}
-export function commonEnum_SpeculativeHedgingSigns_1() {
-  return "套利";
-}
-export function commonEnum_SpeculativeHedgingSigns_2() {
-  return "套保";
-}
-export function commonEnum_MarketCategory_0() {
-  return "现货";
-}
-export function commonEnum_MarketCategory_1() {
-  return "即期";
-}
-export function commonEnum_MarketCategory_2() {
-  return "延期";
-}
-export function commonEnum_MarketCategory_3() {
-  return "询价";
-}
-export function commonEnum_MarketCategory_4() {
-  return "期货";
-}
-export function commonEnum_TradingUnit_0() {
-  return "手";
-}
-export function commonEnum_TradingUnit_1() {
-  return "张";
-}
-export function commonEnum_TradingUnit_2() {
-  return "股";
-}
-export function commonEnum_TradingUnit_3() {
-  return "份";
-}
-export function commonEnum_TradingCurrencies_1() {
-  return "人民币";
-}
-export function commonEnum_TradingCurrencies_2() {
-  return "港币";
-}
-export function commonEnum_TradingCurrencies_3() {
-  return "美元";
-}
-export function commonEnum_BusinessCategory_0() {
-  return "买入开仓";
-}
-export function commonEnum_BusinessCategory_1() {
-  return "买入平仓";
-}
-export function commonEnum_BusinessCategory_2() {
-  return "卖出开仓";
-}
-export function commonEnum_BusinessCategory_3() {
-  return "卖出平仓";
-}
-export function commonEnum_BusinessCategory_4() {
-  return "交割交货申报";
-}
-export function commonEnum_BusinessCategory_5() {
-  return "交割收货申报";
-}
-export function commonEnum_BusinessCategory_6() {
-  return "中立仓交货申报";
-}
-export function commonEnum_BusinessCategory_7() {
-  return "中立仓收货申报";
-}
-export function commonEnum_HandlingChargeType_0() {
-  return "毛";
-}
-export function commonEnum_HandlingChargeType_1() {
-  return "净";
-}
-export function commonEnum_RangeModel_0() {
-  return "普通模式";
-}
-export function commonEnum_RangeModel_1() {
-  return "模板模式";
-}
-export function commonEnum_PositionDirection_0() {
-  return "净";
-}
-export function commonEnum_PositionDirection_1() {
-  return "多头";
-}
-export function commonEnum_PositionDirection_2() {
-  return "空头";
-}
-export function commonEnum_DeferredPaymentDirection_0() {
-  return "";
-}
-export function commonEnum_DeferredPaymentDirection_1() {
-  return "多付空";
-}
-export function commonEnum_DeferredPaymentDirection_2() {
-  return "空付多";
-}
-export function commonEnum_DeferredPaymentDirection_3() {
-  return "平";
-}
-export function commonEnum_ClientEncryption_0() {
-  return "明文";
-}
-export function commonEnum_ClientEncryption_1() {
-  return "软加密";
-}
-export function commonEnum_ClientEncryption_2() {
-  return "硬加密";
-}
-export function commonEnum_ConnectionStatus_0() {
-  return "未连接";
-}
-export function commonEnum_ConnectionStatus_1() {
-  return "正在分配";
-}
-export function commonEnum_ConnectionStatus_2() {
-  return "已连接";
-}
-export function commonEnum_UnitOfWeight_0() {
-  return "克";
-}
-export function commonEnum_UnitOfWeight_1() {
-  return "千克";
-}
-export function commonEnum_UnitOfWeight_2() {
-  return "盎司";
-}
+export function commonEnum_InvestorType_0(){return "个人";}
+export function commonEnum_InvestorType_1(){return "机构";}
+export function commonEnum_InvestorType_2(){return "自营";}
+export function commonEnum_IdCardType_0(){return "组织机构代码";}
+export function commonEnum_IdCardType_1(){return "中国公民身份证";}
+export function commonEnum_IdCardType_2(){return "军官证";}
+export function commonEnum_IdCardType_3(){return "警官证";}
+export function commonEnum_IdCardType_4(){return "士兵证";}
+export function commonEnum_IdCardType_5(){return "户口簿";}
+export function commonEnum_IdCardType_6(){return "护照";}
+export function commonEnum_IdCardType_7(){return "台胞证";}
+export function commonEnum_IdCardType_8(){return "回乡证";}
+export function commonEnum_IdCardType_9(){return "营业执照号";}
+export function commonEnum_IdCardType_A(){return "税务登记号/当地纳税ID";}
+export function commonEnum_IdCardType_B(){return "港澳居民来往内地通行证";}
+export function commonEnum_IdCardType_C(){return "台湾居民来往大陆通行证";}
+export function commonEnum_IdCardType_D(){return "驾照";}
+export function commonEnum_IdCardType_F(){return "当地社保ID";}
+export function commonEnum_IdCardType_G(){return "当地身份证";}
+export function commonEnum_IdCardType_H(){return "商业登记证";}
+export function commonEnum_IdCardType_I(){return "港澳永久性居民身份证";}
+export function commonEnum_IdCardType_J(){return "人行开户许可证";}
+export function commonEnum_IdCardType_x(){return "其他证件";}
+export function commonEnum_TradingStatus_0(){return "启用";}
+export function commonEnum_TradingStatus_1(){return "禁用";}
+export function commonEnum_SettleStatus_0(){return "未确认";}
+export function commonEnum_SettleStatus_1(){return "已确认";}
+export function commonEnum_UserType_0(){return "经纪公司用户";}
+export function commonEnum_UserType_1(){return "超级用户";}
+export function commonEnum_UserType_2(){return "投资者用户";}
+export function commonEnum_PasswordEncodeMode_0(){return "明文";}
+export function commonEnum_PasswordEncodeMode_2(){return "AES加密";}
+export function commonEnum_PasswordEncodeMode_3(){return "SHA加密";}
+export function commonEnum_PasswordEncodeMode_4(){return "MD5加密";}
+export function commonEnum_LoginStatus_0(){return "启用";}
+export function commonEnum_LoginStatus_1(){return "禁用";}
+export function commonEnum_LoginStatus_2(){return "锁定";}
+export function commonEnum_FunctionID_00(){return "空";}
+export function commonEnum_FunctionID_1a(){return "报单插入";}
+export function commonEnum_FunctionID_1b(){return "报单操作";}
+export function commonEnum_FunctionID_1c(){return "强平单插入";}
+export function commonEnum_FunctionID_1d(){return "强平单操作";}
+export function commonEnum_FunctionID_1e(){return "强制撤单";}
+export function commonEnum_FunctionID_1f(){return "强撤强平单";}
+export function commonEnum_FunctionID_1g(){return "交割申报插入";}
+export function commonEnum_FunctionID_1h(){return "交割申报操作";}
+export function commonEnum_FunctionID_1i(){return "强撤交割申报";}
+export function commonEnum_FunctionID_1j(){return "中立仓申报插入";}
+export function commonEnum_FunctionID_1k(){return "中立仓申报操作";}
+export function commonEnum_FunctionID_1l(){return "强撤中立仓申报";}
+export function commonEnum_FunctionID_1m(){return "条件单插入";}
+export function commonEnum_FunctionID_1n(){return "条件单操作";}
+export function commonEnum_FunctionID_2a(){return "银证转账";}
+export function commonEnum_FunctionID_2b(){return "资金调整";}
+export function commonEnum_FunctionID_2c(){return "库存调整";}
+export function commonEnum_FunctionID_2d(){return "持仓调整";}
+export function commonEnum_FunctionID_2e(){return "查询会员资金";}
+export function commonEnum_FunctionID_2f(){return "查询会员持仓";}
+export function commonEnum_FunctionID_3a(){return "合约信息管理";}
+export function commonEnum_FunctionID_3b(){return "行情管理";}
+export function commonEnum_FunctionID_3c(){return "交割行情管理";}
+export function commonEnum_FunctionID_3d(){return "投资者管理";}
+export function commonEnum_FunctionID_3e(){return "业务单元管理";}
+export function commonEnum_FunctionID_3f(){return "柜员用户管理";}
+export function commonEnum_FunctionID_3g(){return "用户投资者代理关系管理";}
+export function commonEnum_FunctionID_3h(){return "经纪公司用户功能权限管理";}
+export function commonEnum_FunctionID_3i(){return "交易编码管理";}
+export function commonEnum_FunctionID_3j(){return "投资者保证金率管理";}
+export function commonEnum_FunctionID_3k(){return "投资者手续费率管理";}
+export function commonEnum_FunctionID_3l(){return "投资者交易权限管理";}
+export function commonEnum_FunctionID_3m(){return "业务单元资金账号管理关系管理";}
+export function commonEnum_FunctionID_3n(){return "投资者限仓额度管理";}
+export function commonEnum_FunctionID_3o(){return "经纪公司限仓额度管理";}
+export function commonEnum_FunctionID_3p(){return "投资者限额额度管理";}
+export function commonEnum_FunctionID_3q(){return "交易通知管理";}
+export function commonEnum_FunctionID_3r(){return "交割品种管理";}
+export function commonEnum_FunctionID_3s(){return "经纪公司条件单限制管理";}
+export function commonEnum_FunctionID_3t(){return "投资者条件单限制管理";}
+export function commonEnum_FunctionID_3u(){return "保证金率模板管理";}
+export function commonEnum_FunctionID_3v(){return "手续费率模板管理";}
+export function commonEnum_FunctionID_3w(){return "交易权限模板管理";}
+export function commonEnum_FunctionID_3x(){return "限仓模板管理";}
+export function commonEnum_FunctionID_3y(){return "限额模板管理";}
+export function commonEnum_FunctionID_4a(){return "系统参数管理";}
+export function commonEnum_FunctionID_4b(){return "系统状态管理";}
+export function commonEnum_FunctionID_4c(){return "应用程序信息管理";}
+export function commonEnum_FunctionID_4d(){return "应用程序用户";}
+export function commonEnum_FunctionID_4e(){return "经纪公司信息管理";}
+export function commonEnum_FunctionID_4f(){return "用户登录IP限制管理";}
+export function commonEnum_FunctionID_4g(){return "会员管理";}
+export function commonEnum_FunctionID_4h(){return "交易报盘管理";}
+export function commonEnum_FunctionID_4i(){return "行情报盘管理";}
+export function commonEnum_FunctionID_4j(){return "交易员报单序号管理";}
+export function commonEnum_FunctionID_4k(){return "交易所回报主题号管理";}
+export function commonEnum_FunctionID_5a(){return "重置用户密码";}
+export function commonEnum_FunctionID_5b(){return "录入设备序列";}
+export function commonEnum_FunctionID_5c(){return "校验用户密码";}
+export function commonEnum_FunctionID_5d(){return "强制登出";}
+export function commonEnum_FunctionID_5e(){return "强制退出";}
+export function commonEnum_FunctionID_5f(){return "激活用户";}
+export function commonEnum_FunctionID_5g(){return "结算单确认";}
+export function commonEnum_FunctionID_6a(){return "查询证券信息";}
+export function commonEnum_FunctionID_6b(){return "查询行情";}
+export function commonEnum_FunctionID_6c(){return "查询投资者";}
+export function commonEnum_FunctionID_6d(){return "查询业务单元";}
+export function commonEnum_FunctionID_6e(){return "查询柜员用户";}
+export function commonEnum_FunctionID_6f(){return "查询用户投资者代理关系";}
+export function commonEnum_FunctionID_6g(){return "查询经纪公司用户功能权限";}
+export function commonEnum_FunctionID_6h(){return "查询交易编码";}
+export function commonEnum_FunctionID_6i(){return "查询报单";}
+export function commonEnum_FunctionID_6j(){return "查询报单操作";}
+export function commonEnum_FunctionID_6k(){return "查询成交";}
+export function commonEnum_FunctionID_6l(){return "查询持仓";}
+export function commonEnum_FunctionID_6m(){return "查询库存";}
+export function commonEnum_FunctionID_6n(){return "查询资金";}
+export function commonEnum_FunctionID_6o(){return "查询投资者保证金率";}
+export function commonEnum_FunctionID_6p(){return "查询投资者手续费率";}
+export function commonEnum_FunctionID_6q(){return "查询投资者交易权限";}
+export function commonEnum_FunctionID_6r(){return "查询报单资金明细";}
+export function commonEnum_FunctionID_6s(){return "查询业务单元资金账户关联关系";}
+export function commonEnum_FunctionID_6t(){return "查询投资者限仓额度";}
+export function commonEnum_FunctionID_6u(){return "查询经纪公司限仓额度";}
+export function commonEnum_FunctionID_6v(){return "查询投资者限额额度";}
+export function commonEnum_FunctionID_6w(){return "查询交易通知";}
+export function commonEnum_FunctionID_6x(){return "查询交割申报";}
+export function commonEnum_FunctionID_6y(){return "查询交割申报操作";}
+export function commonEnum_FunctionID_6z(){return "查询交割申报成交";}
+export function commonEnum_FunctionID_7a(){return "查询中立仓申报";}
+export function commonEnum_FunctionID_7b(){return "查询中立仓申报操作";}
+export function commonEnum_FunctionID_7c(){return "查询中立仓申报成交";}
+export function commonEnum_FunctionID_7d(){return "查询结算单";}
+export function commonEnum_FunctionID_7e(){return "查询交割行情";}
+export function commonEnum_FunctionID_7f(){return "查询资金转移流水";}
+export function commonEnum_FunctionID_7g(){return "查询库存转移流水";}
+export function commonEnum_FunctionID_7h(){return "查询持仓转移流水";}
+export function commonEnum_FunctionID_7i(){return "查询经纪公司条件单限制";}
+export function commonEnum_FunctionID_7j(){return "查询投资者条件单限制";}
+export function commonEnum_FunctionID_7k(){return "查询条件单";}
+export function commonEnum_FunctionID_7l(){return "查询条件单操作";}
+export function commonEnum_FunctionID_7m(){return "查询交割品种信息";}
+export function commonEnum_FunctionID_7n(){return "查询保证金率模板";}
+export function commonEnum_FunctionID_7o(){return "查询手续费率模板";}
+export function commonEnum_FunctionID_7p(){return "查询交易权限模板";}
+export function commonEnum_FunctionID_7q(){return "查询限仓模板";}
+export function commonEnum_FunctionID_7r(){return "查询限额模板";}
+export function commonEnum_FunctionID_9a(){return "Dump证券信息";}
+export function commonEnum_FunctionID_9b(){return "Dump行情";}
+export function commonEnum_FunctionID_9c(){return "Dump投资者";}
+export function commonEnum_FunctionID_9d(){return "Dump业务单元";}
+export function commonEnum_FunctionID_9e(){return "Dump柜员用户";}
+export function commonEnum_FunctionID_9f(){return "Dump用户投资者代理关系";}
+export function commonEnum_FunctionID_9g(){return "Dump经纪公司用户功能权限";}
+export function commonEnum_FunctionID_9h(){return "Dump交易编码";}
+export function commonEnum_FunctionID_9i(){return "Dump报单";}
+export function commonEnum_FunctionID_9j(){return "Dump报单操作";}
+export function commonEnum_FunctionID_9k(){return "Dump成交";}
+export function commonEnum_FunctionID_9l(){return "Dump持仓";}
+export function commonEnum_FunctionID_9m(){return "Dump库存";}
+export function commonEnum_FunctionID_9n(){return "Dump资金";}
+export function commonEnum_FunctionID_9o(){return "Dump投资者保证金率";}
+export function commonEnum_FunctionID_9p(){return "Dump投资者手续费率";}
+export function commonEnum_FunctionID_9q(){return "Dump投资者交易权限";}
+export function commonEnum_FunctionID_9r(){return "Dump报单资金明细";}
+export function commonEnum_FunctionID_9s(){return "Dump业务单元资金账户关联关系";}
+export function commonEnum_FunctionID_9t(){return "Dump投资者限仓额度";}
+export function commonEnum_FunctionID_9u(){return "Dump经纪公司限仓额度";}
+export function commonEnum_FunctionID_9v(){return "Dump投资者限额额度";}
+export function commonEnum_FunctionID_9w(){return "Dump交易通知";}
+export function commonEnum_FunctionID_9x(){return "Dump交割申报";}
+export function commonEnum_FunctionID_9y(){return "Dump交割申报操作";}
+export function commonEnum_FunctionID_9z(){return "Dump交割申报成交";}
+export function commonEnum_FunctionID_aa(){return "Dump中立仓申报";}
+export function commonEnum_FunctionID_ab(){return "Dump中立仓申报操作";}
+export function commonEnum_FunctionID_ac(){return "Dump中立仓申报成交";}
+export function commonEnum_FunctionID_ad(){return "Dump结算单";}
+export function commonEnum_FunctionID_ae(){return "Dump交割行情";}
+export function commonEnum_FunctionID_af(){return "Dump资金转移流水";}
+export function commonEnum_FunctionID_ag(){return "Dump库存转移流水";}
+export function commonEnum_FunctionID_ah(){return "Dump持仓转移流水";}
+export function commonEnum_FunctionID_ai(){return "Dump经纪公司条件单限制";}
+export function commonEnum_FunctionID_aj(){return "Dump投资者条件单限制";}
+export function commonEnum_FunctionID_ak(){return "Dump条件单";}
+export function commonEnum_FunctionID_al(){return "Dump条件单操作";}
+export function commonEnum_FunctionID_am(){return "Dump交割品种信息";}
+export function commonEnum_FunctionID_an(){return "Dump保证金率模板";}
+export function commonEnum_FunctionID_ao(){return "Dump手续费率模板";}
+export function commonEnum_FunctionID_ap(){return "Dump交易权限模板";}
+export function commonEnum_FunctionID_aq(){return "Dump限仓模板";}
+export function commonEnum_FunctionID_ar(){return "Dump限额模板";}
+export function commonEnum_FunctionID_zz(){return "Dump所有数据";}
+export function commonEnum_CurrencyID_1(){return "人民币";}
+export function commonEnum_CurrencyID_2(){return "港币";}
+export function commonEnum_CurrencyID_3(){return "美元";}
+export function commonEnum_BankID_1(){return "中国建设银行";}
+export function commonEnum_BankID_2(){return "中国农业银行";}
+export function commonEnum_BankID_3(){return "中国工商银行";}
+export function commonEnum_BankID_4(){return "中国银行";}
+export function commonEnum_BankID_5(){return "中国招商银行";}
+export function commonEnum_BankID_6(){return "中国交通银行";}
+export function commonEnum_BankID_7(){return "浦东发展银行";}
+export function commonEnum_BankID_8(){return "兴业银行";}
+export function commonEnum_BankID_9(){return "中国光大银行";}
+export function commonEnum_BankID_a(){return "广东发展银行";}
+export function commonEnum_ExchangeID_0(){return "通用内部使用";}
+export function commonEnum_ExchangeID_1(){return "上海黄金交易所";}
+export function commonEnum_ExchangeID_2(){return "上海期货交易所";}
+export function commonEnum_HedgeFlag_0(){return "投机";}
+export function commonEnum_HedgeFlag_1(){return "套利";}
+export function commonEnum_HedgeFlag_2(){return "套保";}
+export function commonEnum_MarketID_0(){return "现货";}
+export function commonEnum_MarketID_1(){return "即期";}
+export function commonEnum_MarketID_2(){return "延期";}
+export function commonEnum_MarketID_3(){return "询价";}
+export function commonEnum_MarketID_4(){return "期货";}
+export function commonEnum_TradeUnit_0(){return "手";}
+export function commonEnum_TradeUnit_1(){return "张";}
+export function commonEnum_TradeUnit_2(){return "股";}
+export function commonEnum_TradeUnit_3(){return "份";}
+export function commonEnum_DeliveryMode_0(){return "实物交割";}
+export function commonEnum_DeliveryMode_1(){return "保证金交割";}
+export function commonEnum_BizClass_0(){return "买入开仓";}
+export function commonEnum_BizClass_1(){return "买入平仓";}
+export function commonEnum_BizClass_2(){return "卖出开仓";}
+export function commonEnum_BizClass_3(){return "卖出平仓";}
+export function commonEnum_BizClass_4(){return "交割交货申报";}
+export function commonEnum_BizClass_5(){return "交割收货申报";}
+export function commonEnum_BizClass_6(){return "中立仓交货申报";}
+export function commonEnum_BizClass_7(){return "中立仓收货申报";}
+export function commonEnum_CommissionType_0(){return "毛";}
+export function commonEnum_CommissionType_1(){return "净";}
+export function commonEnum_RangeMode_0(){return "普通模式";}
+export function commonEnum_RangeMode_1(){return "模板模式";}
+export function commonEnum_PosiDirection_0(){return "净";}
+export function commonEnum_PosiDirection_1(){return "多头";}
+export function commonEnum_PosiDirection_2(){return "空头";}
+export function commonEnum_DeferPayDirection_0(){return "";}
+export function commonEnum_DeferPayDirection_1(){return "多付空";}
+export function commonEnum_DeferPayDirection_2(){return "空付多";}
+export function commonEnum_DeferPayDirection_3(){return "平";}
+export function commonEnum_ClientEncMode_0(){return "明文";}
+export function commonEnum_ClientEncMode_1(){return "软加密";}
+export function commonEnum_ClientEncMode_2(){return "硬加密";}
+export function commonEnum_ConnectStatus_0(){return "未连接";}
+export function commonEnum_ConnectStatus_1(){return "正在分配";}
+export function commonEnum_ConnectStatus_2(){return "已连接";}
+export function commonEnum_WeightUnit_0(){return "克";}
+export function commonEnum_WeightUnit_1(){return "千克";}
+export function commonEnum_WeightUnit_2(){return "盎司";}

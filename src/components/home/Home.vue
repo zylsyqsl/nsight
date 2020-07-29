@@ -1,44 +1,30 @@
 <template>
-  <div class="view_container">
-    11111111111111
-    <div @click="toTest">toTest</div>
-    <Vmenu></Vmenu>
+  <div>
+    <div class="home_bg">
+      <img src="~assets/image/home_background.png" />
+    </div>
   </div>
-
 </template>
 
-<script> 
-import Vmenu from '@/components/Menu'
+<script>
 export default {
-  components: {
-    Vmenu,
-  },
   data () {
-    return {
-
-    };
+    return {};
   },
   mounted: function () {
     this.init();
   },
   methods: {
-    toTest () {
-      this.$router.push('test');
-    },
-    init: function () {
-      this.$fetchPost("/sq/v1/bc9-pq/get_security_trading_day", {
-        'tradeSystemId': "0001"
-      }).then(response => {
-        if (response) {
-          console.log(response);
-        }
-      });
-    }
-  }
+    init: function () { }
+  },
+
 };
 </script>
 <style lang="stylus" scoped>
-.container {
-  padding: 0.1rem;
+.home_bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -10px;
 }
 </style>

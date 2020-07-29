@@ -30,9 +30,9 @@
                         >账号：</el-col
                       >
                       <el-col :span="17">
-                        <el-form-item prop="userName">
+                        <el-form-item prop="userID">
                           <el-input
-                            v-model="loginForm.userName"
+                            v-model="loginForm.userID"
                             @keyup.enter.native="login"
                             placeholder="请输入您的用户名/手机号"
                           >
@@ -146,11 +146,13 @@
 
 <script>
 // import * as types from '../store/types'
+// 引入jsencrypt;
+import { JSEncrypt } from "jsencrypt";
 export default {
   data() {
     return {
       loginForm: {
-        userName: "",
+        userID: "",
         password: "",
         verificationCode: ""
       },
@@ -160,7 +162,7 @@ export default {
       isRemember: false,
       isAutoLogin: false,
       rules: {
-        userName: [
+        userID: [
           { required: true, message: "用户名/手机号不可为空", trigger: "blur" }
         ],
         password: [{ required: true, message: "密码不可为空", trigger: "blur" }]
@@ -176,24 +178,22 @@ export default {
     showPwdClick: function() {},
     login: function() {
       var self = this;
-      console.log(1111111);
-      this.$fetchPost("/logon").then(response => {
+      this.$fetchPost("/api/v1/logon", this.loginForm).then(response => {
         if (response) {
           this.$root.loadView("home", "_self", null, "get");
         }
       });
     },
     test: function() {
-      //  var self = this;
-      // this.$http.post('/test',{'test':'123456'})
-      //           .then(function (response) {
-      //              if(response.data.success){
-      //                 self.$store.dispatch(types.LOGIN,response.data.token)
-      //              }
-      //           })
-      //           .catch(function (error) {
-      //             //  console.log(error);
-      //           });
+      let publicKey =
+        "\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkWEMXmOfRmeFbmrWLyUM\nicxnY1ptuo2N2L/uKupD8EDvWXwTw9YBiZiPgXd0YvrW+5EDOX/AdQ/zVIlUCLzo\n7fY9M1vGv+pl7Y6mvQEV99sr1fapVmXEMVvCz8xR1360BuI4AZuiIfaqfsKxmyvx\nhEUkKS39rT3ocZYiGwR3UpBgyN1rCMx3oCbHrkpbXj2BuznP9aMVBq1ESSYKodAv\nQzrL9pgOU9DfH8PRLQb42LBRCYOMEZUBboSSMrRN4ODCkMTOnWxZEMW34aZ0hI9o\n4zHHrLAs8wGKZz9HUsh3TSiSnzslhyC1l14HWLV+vtj0x9yQiktU1KeIeAQ8rOE2\nLwIDAQAB\n";
+      let Encrypt = new JSEncrypt();
+      Encrypt.setPublicKey(publicKey);
+      let pwd = Encrypt.encrypt("123456");
+      console.log(pwd);
+
+      let pwd1 = Encrypt.encrypt("123456");
+      console.log(pwd1);
     }
   }
 };

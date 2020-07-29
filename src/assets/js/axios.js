@@ -1,6 +1,7 @@
 import Vue from "vue";
 import qs from "qs"; // 引入qs
 import { Loading, Alert } from "element-ui";
+import easyResponse from "./response";
 var axios = require("axios");
 
 let v = new Vue();
@@ -39,13 +40,11 @@ $http.interceptors.request.use(
     return Promise.reject(err);
   }
 );
-console.log($http.interceptors.request);
 //响应拦截
 $http.interceptors.response.use(
   function(response) {
     //关闭遮罩
     globalLoading.close();
-    console.log(response);
     return response;
   },
   function(err) {
@@ -112,30 +111,33 @@ $http.interceptors.response.use(
   }
 );
 
-async function fetchPost(url, params) {
+async function fetchPost(url, params, failCb) {
   // 这里主要是post方法的封装
   // let data = qs.stringify(params);
   return new Promise((resolve, reject) => {
     $http
       .post(url, params)
       .then(response => {
-        console.log(response);
+        let res = easyResponse.load(response.data);
         //  这里主要根据后来返回的数据作判断，请根据实际情况
-        if (response.data.success) {
-          resolve(response.data);
+        if (res.isSuccess()) {
+          resolve(res);
         } else {
-          var errorMsg = "";
-          switch (response.data.code) {
-            case -500:
-              errorMsg = "服务器内部错误";
-              break;
-            default:
+          if (failCb) {
+            failCb(res);
+          } else {
+            var errorMsg = res.getMsg();
+            switch (res.getCode()) {
+              case -500:
+                errorMsg = "服务器内部错误";
+                break;
+              default:
+            }
+            v.$alert(errorMsg, "错误提示", {
+              confirmButtonText: "确定",
+              callback: action => {}
+            });
           }
-
-          v.$alert(errorMsg, "错误提示", {
-            confirmButtonText: "确定",
-            callback: action => {}
-          });
           resolve(false);
         }
       })
@@ -151,12 +153,13 @@ async function fetchGet(url, params) {
       .get(url, params)
       .then(
         response => {
+          let res = easyResponse.load(response.data);
           //  这里主要根据后来返回的数据作判断，请根据实际情况
-          if (response.data.code === 200) {
-            resolve(response.data);
+          if (res.isSuccess()) {
+            resolve(res);
           } else {
-            var errorMsg = "";
-            switch (response.data.code) {
+            var errorMsg = res.getMsg();
+            switch (res.getCode()) {
               case -500:
                 errorMsg = "服务器内部错误";
                 break;
@@ -180,3 +183,14 @@ async function fetchGet(url, params) {
 }
 
 export { $http, fetchPost, fetchGet };
+
+/**
+ * axios 封装概述：
+ * 页面直接调用fetchPost，fetchGet
+ * 1、调用之后
+ * 2、先进请求拦截
+ * 3、再进响应拦截
+ * 4、响应拦截调用 resolve 则进fetch的then；调用reject则进fetch的chatch
+ * 5、fetch中的then碰到错误，一般是业务内部异常，则调用resolve(false)。进入页面上具体调用处的then方法，所以页面具体调用时，then先判断返回的response是否为真
+ * 6、fetch中的catch一般是处理网络问题，直接打印出来，不要调用reject。呢么页面具体调用处，就不用再写catch了。
+ * **/

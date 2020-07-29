@@ -8,6 +8,7 @@ import localforage from "localforage";
 
 import "@/assets/css/common.css";
 import { getEnumLabel } from "@/assets/js/enumLabel.js";
+// 导入对应的vuex文件
 
 import { $http, fetchGet, fetchPost } from "@/assets/js/axios";
 
@@ -19,12 +20,17 @@ Vue.prototype.$fetchPost = fetchPost;
 Vue.prototype.$fetchGet = fetchGet;
 Vue.prototype.$getEnumLabel = getEnumLabel;
 
+$(document).attr("title", "结算系统");
+
 export const globalMixin = {
   mixins: [imgErrMixin],
+
   data() {
     return {
       userInfo: {},
-      scope: {}
+      scope: {},
+      userDataLoaded: false,
+      isPageShow: false
     };
   },
   created() {
@@ -34,7 +40,23 @@ export const globalMixin = {
   methods: {
     getBaseInfo() {
       try {
-        // 获取用户基本信息
+        let resultUrl = this.$route.name;
+        if (resultUrl != "login") {
+          // 获取用户基本信息
+          this.$fetchPost("/api/v1/sq/adm/auth/getSessionUser").then(
+            response => {
+              if (response) {
+                if (response.getData(0).length > 0) {
+                  this.userInfo = {
+                    userID: response.getData(0)[0][0],
+                    userName: response.getData(0)[0][1]
+                  };
+                }
+                this.userDataLoaded = true;
+              }
+            }
+          );
+        }
       } catch (err) {
         console.log(err);
       }
@@ -52,11 +74,12 @@ export const globalMixin = {
         });
       }
     },
-    loadView(uid, target, scope, method) {
+    loadView(uid, target, scope, method, subRouter) {
       var tempUrl = uid + ".html";
       if (method == "get") {
         var hashkey = this.makeHashKey();
-        let url = tempUrl + "#" + hashkey;
+        let url = tempUrl + (subRouter ? "#/" + subRouter : "") + "#" + hashkey;
+        // let url = tempUrl + "#/" + subRouter;
         this.setScope(tempUrl, hashkey, scope, function() {
           window.open(url, target ? target : "_self");
         });
@@ -119,7 +142,12 @@ export const globalMixin = {
       if (!window.location.hash) {
         window.location.hash = this.makeHashKey();
       }
-      let hashKey = window.location.hash.replace("/", ""); //用户路由是hash模式下的匹配
+      //用户路由是hash模式下的匹配
+      let tempHash = window.location.hash;
+      let tempHashIndex = tempHash.lastIndexOf("#");
+      let hashKey = tempHash.substr(tempHashIndex, tempHash.length - 1);
+
+      // let hashKey = window.location.hash.replace("/", "");
       var windowKey = "VIEW-" + hashKey;
       var itemKey = windowKey + "-" + rViewId;
       try {

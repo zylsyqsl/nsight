@@ -2,6 +2,8 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background: #f9f9f9;
+  color: #696464;
 }
 .view_container {
   font-size: 14px;
@@ -10,7 +12,44 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+.router_view {
+  background: #fff;
+  min-height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
+/**************查询区域start***************/
+.query_container {
+  margin-bottom: 10px;
+}
+.query_block {
+  margin-bottom: 10px;
+}
+.query_label {
+  min-width: 80px;
+  text-align: right;
+}
+/**************查询区域end***************/
+
+/**************操作按钮区域start***************/
+.option_container {
+  text-align: right;
+  padding: 5px 0;
+}
+.option_span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.option_span img {
+  width: 100%;
+}
+/**************操作按钮区域end***************/
+
+/****************************element-ui start*****************************/
 /**************表格start***************/
 
 .el-table td,
@@ -23,28 +62,64 @@ body {
 .el-table thead {
   color: #fff;
 }
+.el-table .has-gutter th.is-leaf:first-child {
+  border-top-left-radius: 15px;
+}
+.el-table .has-gutter th.is-leaf:nth-last-child(2) {
+  border-top-right-radius: 15px;
+}
 /**************表格end***************/
 
-/**************按钮start***************/
-.btn {
-  border: 1px solid #4c7bfe;
-  padding: 5px 15px;
-  border-radius: 5px;
-  font-size: 13px;
-  color: #4c7bfe;
-  cursor: pointer;
-  background: #fff;
-  letter-spacing: 2px;
+/**************radio start***************/
+.el-radio-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-.check_btn {
-  height: 38px;
-  display: inline-block;
-  line-height: 38px;
-  padding: 0 20px;
+.el-radio-button__inner {
+  border-left: 1px solid #dcdfe6;
+}
+.el-radio-button:first-child .el-radio-button__inner {
   border-radius: 0;
 }
-.btn.btn_submit.btn_disabled {
-  opacity: 0.4;
-  cursor: no-drop;
+/**************radio end***************/
+
+/**************dialog start***************/
+.el-dialog__header {
+  padding: 10px;
+  text-align: center;
+  background: #fb6149;
 }
-/**************按钮end***************/
+.el-dialog__title {
+  color: #fff;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  color: #fff;
+}
+.el-dialog__headerbtn {
+  top: 13px;
+}
+/**************dialog end***************/
+
+/**************form start***************/
+.xu_form.el-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.el-form-item {
+  margin-bottom: 14px;
+}
+.el-form-item__error {
+  padding-top: 0px;
+}
+.el-form-item.form-item-box .el-input {
+  width: 193px;
+}
+/**************form end***************/
+/****************************element-ui end*****************************/
+
+/**************弹框自增样式 start***************/
+.dialog_option_row {
+  display: flex;
+  justify-content: center;
+}
+/**************弹框自增样式 end***************/
